@@ -141,7 +141,7 @@
         $(document).ready(function () {
           if ($.urlParam('validate')) {
             var isValid = true;
-            
+           <--! validating the input box --> 
             isValid &= validateInput('name', 'Please enter your name!');
             isValid &= validateInput('biography', 'Please tell us something about your history!');
             isValid &= validateInput('gender', 'Please tell us your gender!');
