@@ -31,22 +31,22 @@
           <p id="formInstructions">Fields marked with <span class="required">*</span> are required.</p> <!-- Inline instructions added -->
       
           <div class="control">
-              <label for="name">FULL NAME <span class="required">*</span></label>
+              <label for="name">FULL NAME <span class="required">*</span></label> <!-- Added label tag for making it easy for screen readers-->
               <input id="name" name="name" type="text" aria-required="true" aria-describedby="nameHelp" /> <!-- Added aria-describedby -->
               <span id="nameHelp" class="sr-only">Please enter your full name.</span> <!-- Inline instruction for screen readers -->
           </div>
       
           <div class="control">
-              <label for="biography">BIOGRAPHY <span class="required">*</span></label>
+              <label for="biography">BIOGRAPHY <span class="required">*</span></label><!-- Added biography tag for making it easy for screen readers-->
               <textarea id="biography" name="biography" aria-required="true" aria-describedby="biographyHelp"></textarea> <!-- Added aria-describedby -->
               <span id="biographyHelp">Include examples of your skills in JavaScript.</span> <!-- Instruction for all users -->
           </div>
       
-          <fieldset>
+          <fieldset><!-- Grouping the gender-->
               <legend>GENDER <span class="required">*</span></legend>
               <div class="control">
                   <input id="gender_male" name="gender" type="radio" value="male" aria-required="true" />
-                  <label for="gender_male">Male</label>
+                  <label for="gender_male">Male</label><!-- Added gender tag for making it easy for screen readers-->
               </div>
               <div class="control">
                   <input id="gender_female" name="gender" type="radio" value="female" aria-required="true" />
