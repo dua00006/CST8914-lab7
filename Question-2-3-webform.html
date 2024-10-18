@@ -92,7 +92,7 @@
           if ((value = $.urlParam(input)) === null) {
             if ($('fieldset.errors').length === 0) {
               $('form').prepend('<fieldset class="errors" tabindex="-1"><legend>Errors</legend><ul></ul></fieldset>');
-              <--!Set focus to errors area when errors are displayed-->
+            // Set focus to errors area when errors are displayed
               $('fieldset.errors').focus();
             }
       
@@ -109,7 +109,7 @@
               $referencedElement = $input;
             }
       
-            <!--Create an anchor with href linking to the input's ID-->
+       // Create an anchor with href linking to the input's ID
             $error = $('<a href="#' + $input.attr('id') + '">' + message + '</a>');
             $error.click(function (e) {
               $referencedElement.focus();
@@ -118,7 +118,7 @@
             $elementToDescribe.attr('aria-describedby', input + '_description');
             $errorContainer.append('<li>').find('li:last').append($error);
             
-           <!--Mark this input as invalid-->
+          // Mark this input as invalid
             $input.addClass('invalid');
             return false;
           } else {
@@ -132,7 +132,7 @@
               $input.val(value);
             }
       
-          <!--Mark this input as valid-->
+           // Mark this input as valid
             $input.removeClass('invalid');
             return true;
           }
@@ -147,7 +147,7 @@
             isValid &= validateInput('gender', 'Please tell us your gender!');
             isValid &= validateInput('accept_agbs', 'You must accept our terms and conditions!');
       
-            <!-- added the message for valid input-->
+         // added the message for valid input
             if (isValid) {
               alert('All inputs are valid.');
             } else {
