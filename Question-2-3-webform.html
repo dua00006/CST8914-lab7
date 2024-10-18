@@ -31,22 +31,22 @@
           <p id="formInstructions">Fields marked with <span class="required">*</span> are required.</p> <!-- Inline instructions added -->
       
           <div class="control">
-              <label for="name">FULL NAME <span class="required">*</span></label> <!-- Added label tag for making it easy for screen readers-->
+              <label for="name">Full name <span class="required">*</span></label>
               <input id="name" name="name" type="text" aria-required="true" aria-describedby="nameHelp" /> <!-- Added aria-describedby -->
               <span id="nameHelp" class="sr-only">Please enter your full name.</span> <!-- Inline instruction for screen readers -->
           </div>
       
           <div class="control">
-              <label for="biography">BIOGRAPHY <span class="required">*</span></label><!-- Added biography tag for making it easy for screen readers-->
+              <label for="biography">Biography <span class="required">*</span></label>
               <textarea id="biography" name="biography" aria-required="true" aria-describedby="biographyHelp"></textarea> <!-- Added aria-describedby -->
               <span id="biographyHelp">Include examples of your skills in JavaScript.</span> <!-- Instruction for all users -->
           </div>
       
-          <fieldset><!-- Grouping the gender-->
-              <legend>GENDER <span class="required">*</span></legend>
+          <fieldset>
+              <legend>Gender <span class="required">*</span></legend>
               <div class="control">
                   <input id="gender_male" name="gender" type="radio" value="male" aria-required="true" />
-                  <label for="gender_male">Male</label><!-- Added gender tag for making it easy for screen readers-->
+                  <label for="gender_male">Male</label>
               </div>
               <div class="control">
                   <input id="gender_female" name="gender" type="radio" value="female" aria-required="true" />
@@ -56,7 +56,7 @@
       
           <div class="control">
               <input id="accept_agbs" name="accept_agbs" type="checkbox" value="1" aria-required="true" aria-describedby="termsHelp" /> <!-- Added aria-describedby -->
-              <label for="accept_agbs">I accept the Terms and Conditions <span class="required">*</span></label><br>
+              <label for="accept_agbs">I accept the terms and conditions <span class="required">*</span></label><br>
               <span id="termsHelp" class="sr-only">You must accept the terms and conditions before submitting.</span> <!-- Inline instruction for screen readers -->
           </div>
 
@@ -67,7 +67,7 @@
       </form>
       
       
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <script>
       "use strict";
       
@@ -141,7 +141,7 @@
         $(document).ready(function () {
           if ($.urlParam('validate')) {
             var isValid = true;
-           <--! validating the input box --> 
+            
             isValid &= validateInput('name', 'Please enter your name!');
             isValid &= validateInput('biography', 'Please tell us something about your history!');
             isValid &= validateInput('gender', 'Please tell us your gender!');
